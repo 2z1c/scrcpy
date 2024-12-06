@@ -24,7 +24,7 @@ ADB_INSTALL_DIR="$PWD/app/deps/work/install/adb-linux"
 rm -rf "$LINUX_BUILD_DIR"
 meson setup "$LINUX_BUILD_DIR" \
     --pkg-config-path="$DEPS_INSTALL_DIR/lib/pkgconfig" \
-    -Dc_args="-I$DEPS_INSTALL_DIR/include" \
+    -Dc_args="--static -I$DEPS_INSTALL_DIR/include" \
     -Dc_link_args="-L$DEPS_INSTALL_DIR/lib" \
     --buildtype=release \
     --strip \
