@@ -2,8 +2,8 @@ name: Build
 
 on:
   push:
-    branches: "develop"
-
+    branches:
+      - develop
 env:
   # $VERSION is used by release scripts
   VERSION: ${{ github.event.inputs.name || github.ref_name }}
