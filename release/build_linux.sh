@@ -25,7 +25,7 @@ rm -rf "$LINUX_BUILD_DIR"
 meson setup "$LINUX_BUILD_DIR" \
     --pkg-config-path="$DEPS_INSTALL_DIR/lib/pkgconfig" \
     -Dc_args="--static -I$DEPS_INSTALL_DIR/include" \
-    -Dc_link_args="-L$DEPS_INSTALL_DIR/lib" \
+    -Dc_link_args="--static -L$DEPS_INSTALL_DIR/lib" \
     --buildtype=release \
     --strip \
     -Db_lto=true \
